@@ -1,0 +1,24 @@
+<web-app>
+  <servlet>
+    <servlet-name>ds</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <load-on-startup>5</load-on-startup>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>
+	/WEB-INF/applicationContext-web.xml
+	/WEB-INF/applicationContext-dao-jdbc.xml
+	/WEB-INF/mail.xml
+	</param-value>
+    </init-param>
+   
+    
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ds</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+  <welcome-file>/WEB-INF/pages/login.jsp</welcome-file></welcome-file-list>
+</web-app>
